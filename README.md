@@ -1,5 +1,7 @@
 # Building with Responsive Design
 
+See the page live [here](https://ubercj.github.io/tnw-mockup/).
+
 This is a project from The Odin Project's curriculum - read more about this assignment [here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/html-and-css/lessons/building-with-responsive-design).
 
 The goal of this project is to create sort of a copy of [the TNW site](https://thenextweb.com/). They use media queries to gracefully transition between devices with different screen widths.
