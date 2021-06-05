@@ -102,16 +102,9 @@ input, select {
 }
 
 /*
-==================================
+====================================================================
 Desktop
-==================================
-*/
-
-/*
-Breakpoints: 
-min-width: 1024px and higher
-min-width: 767px to max-width: 1023px
-and below up to max-width: 766px
+====================================================================
 */
 
 * {
@@ -137,7 +130,6 @@ h3 {
 
 #wrapper {
   border: none;
-
   /* margin-left: 5%;
   margin-right: 5%; */
 }
@@ -151,14 +143,49 @@ h3 {
   flex-direction: column;
 }
 
+/* TOP NAVBAR */
+
 #top-nav {
   height: 50px;
   width: 100%;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: black;
+  color: white;
 }
 
-header {
+.nav-left {
+  display: flex;
+}
+
+.mobile-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.nav-right {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+  color: black;
+}
+
+/* MAIN TITLE */
+
+.main-title {
   height: 200px;
   width: 100%;
   display: flex;
@@ -166,6 +193,8 @@ header {
 
   background-color: rgba(0, 0, 255, 0.445);
 }
+
+/* FEATURED STORIES */
 
 .featured {
   background-color: rgba(255, 166, 0, 0.562);
@@ -201,6 +230,8 @@ header {
   grid-area: 3 / 3 / 6 / 5;
 }
 
+/* POPULAR STORIES */
+
 .popular {
   align-items: center;
   padding-top: 40px;
@@ -220,22 +251,29 @@ header {
   height: 150px;
 }
 
+/* LATEST STORIES */
+
 .latest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 80px;
   padding-bottom: 80px;
-
   background-color: rgba(255, 0, 0, 0.473);
 }
 
 .latest > .container{
   flex-wrap: wrap;
   height: 400px;
+  width: 100%;
 }
 
 .latest-item {
   width: 25%;
   height: 50%;
 }
+
+/* CHANNELS */
 
 .channels {
   padding-top: 80px;
@@ -255,10 +293,51 @@ header {
   background-color: purple;
 }
 
+/* NEWSLETTER */
+
 .newsletter {
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: violet;
 }
+
+.control {
+  width: 70%;
+  display: flex;
+  border-radius: 5px;
+}
+
+.control > input {
+  width: 85%;
+  border-radius: 5px 0 0 5px;
+}
+
+.control > button {
+  width: 15%;
+  border-radius: 0 5px 5px 0;
+}
+
+.social-logos {
+  display: flex;
+  justify-content: center;
+  width: min-content;
+}
+
+.social-logo {
+  height: 40px;
+  width: 40px;
+  background-color: goldenrod;
+  margin-right: 4px;
+}
+
+.social-logo:last-child {
+  margin-right: 0;
+}
+
+/* VIDEOS */
 
 .watch {
   padding-top: 80px;
@@ -286,14 +365,69 @@ header {
 
 .side-vid {
   background-color: yellow;
-  width: 33%;
-  height: 100%;
+  width: 100%;
+  height: 33%;
 }
 
+/* WORK SECTION */
+
 .work {
-  height: 500px;
   background-color: grey;
 }
+
+.work > .container {
+  height: 400px;
+}
+
+.work-paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.work-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  width: 50%;
+}
+
+.service {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: orangered;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+.logo {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  font-variant: small-caps;
+  border-radius: 5px;
+}
+
+/* FOOTER */
 
 footer {
   padding-top: 80px;
@@ -303,39 +437,53 @@ footer {
 }
 
 #bottom-nav {
-  height: 300px;
   display: flex;
 }
 
 .footer-left,
 .footer-right {
   width: 50%;
-  height: 100%;
+  height: 300px;
 }
 
 .footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: brown;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .footer-right {
   background-color: cornflowerblue;
 }
 
-.footer-right > .v-container {
+.footer-links {
+  display: flex;
+  flex-direction: column;
   width: 50%;
+}
+
+.footer-links > a {
+  margin-top: 10px;
 }
 
 .bottom {
   height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
 /* min-width: 767px to max-width: 1023px */
 
 /*
-==================================
+====================================================================
 Tablet
-==================================
+====================================================================
 */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -343,7 +491,20 @@ Tablet
     color: red;
   }
 
-  header {
+  /* TOP NAVBAR */
+  
+  .mobile-menu {
+    display: flex;
+  }
+
+  .nav-links,
+  .nav-right {
+    display: none;
+  }
+
+  /* MAIN TITLE */
+
+  .main-title {
     flex-direction: column;
     align-items: center;
   }
@@ -351,6 +512,8 @@ Tablet
   h1 {
     font-size: 5rem;
   }
+
+  /* FEATURED STORIES */
 
   .featured > .container{
     grid-template-columns: repeat(2, 1fr);
@@ -374,6 +537,8 @@ Tablet
     grid-area: auto;
   }
 
+  /* POPULAR STORIES */
+
   .popular {
     align-items: center;
   }
@@ -387,6 +552,8 @@ Tablet
     width: 100%;
     height: 50px;
   }
+
+  /* LATEST STORIES */
   
   .latest > .container{
     flex-wrap: wrap;
@@ -397,6 +564,8 @@ Tablet
     width: 50%;
     height: 200px;
   }
+
+  /* CHANNELS */
 
   .channels > .container {
     height: 200px;
@@ -409,6 +578,35 @@ Tablet
     flex: 0 0 250px;
     margin-right: 12px;
   }
+
+  /* WORK SECTION */
+  
+  .work > .container {
+    height: 400px;
+  }
+    
+  .logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .logo {
+    height: 120px;
+    width: 33%;
+  }
+  
+  button {
+    width: 200px;
+    height: 50px;
+    font-variant: small-caps;
+    border-radius: 5px;
+  }
+
+  /* FOOTER */
   
   #bottom-nav {
     flex-direction: column;
@@ -424,9 +622,9 @@ Tablet
 
 
 /*
-==================================
+====================================================================
 Mobile
-==================================
+====================================================================
 */
 
 @media screen and (max-width: 767px) {
@@ -434,7 +632,20 @@ Mobile
     color: blue;
   }
 
-  header {
+  /* TOP NAVBAR */
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .nav-links,
+  .nav-right {
+    display: none;
+  }
+
+  /* MAIN TITLE */
+
+  .main-title {
     flex-direction: column;
     align-items: center;
   }
@@ -442,6 +653,8 @@ Mobile
   h1 {
     font-size: 5rem;
   }
+
+  /* FEATURED STORIES */
 
   .featured {
     height: 600px;
@@ -465,6 +678,8 @@ Mobile
     height: 150px;
   }
 
+  /* POPULAR STORIES */
+
   .popular {
     align-items: center;
   }
@@ -479,6 +694,8 @@ Mobile
     height: 50px;
   }
 
+  /* LATEST STORIES */
+
   .latest > .container{
     flex-wrap: none;
     height: auto;
@@ -488,6 +705,8 @@ Mobile
     width: 100%;
     height: 100px;
   }
+
+  /* CHANNELS */
 
   .channels > .container {
     height: 200px;
@@ -500,6 +719,8 @@ Mobile
     flex: 0 0 250px;
     margin-right: 12px;
   }
+
+  /* VIDEOS */
 
   .watch {
     padding-top: 80px;
@@ -534,7 +755,56 @@ Mobile
     height: 100%;
   }
 
-  /* Work ??? */
+  /* WORK SECTION */
+
+  .work > .container {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .work-paragraph,
+  .work-services {
+    width: 100%;
+    height: 300px;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: orangered;
+  }
+  
+  .logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  .logo {
+    height: 120px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    width: 200px;
+    height: 50px;
+    font-variant: small-caps;
+    border-radius: 5px;
+  }
+
+  /* FOOTER */
 
   #bottom-nav {
     flex-direction: column;
