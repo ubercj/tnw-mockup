@@ -20,7 +20,7 @@ footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
     padding:0;
-    border:0;
+    /* border:0; */
     outline:0;
     font-size:100%;
     vertical-align:baseline;
@@ -103,5 +103,446 @@ input, select {
 
 /*
 ==================================
+Desktop
 ==================================
 */
+
+/*
+Breakpoints: 
+min-width: 1024px and higher
+min-width: 767px to max-width: 1023px
+and below up to max-width: 766px
+*/
+
+* {
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+#wrapper {
+  border: none;
+
+  /* margin-left: 5%;
+  margin-right: 5%; */
+}
+
+.container {
+  display: flex;
+}
+
+.v-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#top-nav {
+  height: 50px;
+  width: 100%;
+
+  background-color: black;
+}
+
+header {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  background-color: rgba(0, 0, 255, 0.445);
+}
+
+.featured {
+  background-color: rgba(255, 166, 0, 0.562);
+}
+
+.featured > .container{
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  padding: 10px;
+}
+
+.featured-item {
+  background-color: pink;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.featured-item:first-child {
+  background-color: orange;
+  grid-area: 1 / 1 / 4 / 3;
+}
+
+.featured-item:nth-child(4) {
+  background-color: darkturquoise;
+  grid-area: 4 / 1 / 6 / 3;
+}
+
+.featured-item:last-child {
+  background-color: orange;
+  grid-area: 3 / 3 / 6 / 5;
+}
+
+.popular {
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-color: rgba(0, 0, 255, 0.521);
+}
+
+.popular > .container {
+  justify-content: space-around;
+  width: 100%;
+}
+
+.popular-item {
+  background-color: beige;
+  width: 15%;
+  height: 150px;
+}
+
+.latest {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  background-color: rgba(255, 0, 0, 0.473);
+}
+
+.latest > .container{
+  flex-wrap: wrap;
+  height: 400px;
+}
+
+.latest-item {
+  width: 25%;
+  height: 50%;
+}
+
+.channels {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  background-color: rgba(0, 128, 0, 0.527);
+}
+
+.channels > .container {
+  height: 200px;
+  justify-content: space-around;
+}
+
+.channel-item {
+  height: 100%;
+  width: 15%;
+  background-color: purple;
+}
+
+.newsletter {
+  height: 300px;
+  background-color: violet;
+}
+
+.watch {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  background-color: rgba(255, 192, 203, 0.507);
+}
+
+.watch > .container {
+  height: 400px;
+  justify-content: space-around;
+}
+
+.main-vid {
+  width: 70%;
+  background-color: green;
+}
+
+.side-videos {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-vid {
+  background-color: yellow;
+  width: 33%;
+  height: 100%;
+}
+
+.work {
+  height: 500px;
+  background-color: grey;
+}
+
+footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  background-color: rgba(165, 42, 42, 0.473);
+}
+
+#bottom-nav {
+  height: 300px;
+  display: flex;
+}
+
+.footer-left,
+.footer-right {
+  width: 50%;
+  height: 100%;
+}
+
+.footer-left {
+  background-color: brown;
+}
+
+.footer-right {
+  background-color: cornflowerblue;
+}
+
+.footer-right > .v-container {
+  width: 50%;
+}
+
+.bottom {
+  height: 200px;
+}
+
+
+/* min-width: 767px to max-width: 1023px */
+
+/*
+==================================
+Tablet
+==================================
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  * {
+    color: red;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .featured > .container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  .featured-item {
+    grid-row-start: auto;
+    grid-row-end: auto;
+  }
+  
+  .featured-item:first-child {
+    grid-row-start: 1 / 3;
+  }
+  
+  .featured-item:nth-child(4) {
+    grid-area: auto;
+  }
+  
+  .featured-item:last-child {
+    grid-area: auto;
+  }
+
+  .popular {
+    align-items: center;
+  }
+  
+  .popular > .container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .popular-item {
+    width: 100%;
+    height: 50px;
+  }
+  
+  .latest > .container{
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  .latest-item {
+    width: 50%;
+    height: 200px;
+  }
+
+  .channels > .container {
+    height: 200px;
+    justify-content: space-around;
+    overflow-x: auto;
+  }
+  
+  .channel-item {
+    height: 100%;
+    flex: 0 0 250px;
+    margin-right: 12px;
+  }
+  
+  #bottom-nav {
+    flex-direction: column;
+  }
+
+  .footer-left,
+  .footer-right {
+  width: 100%;
+  height: auto;
+  }
+}
+
+
+
+/*
+==================================
+Mobile
+==================================
+*/
+
+@media screen and (max-width: 767px) {
+  * {
+    color: blue;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .featured {
+    height: 600px;
+    position: relative;
+  }
+
+  .featured > .container {
+    height: 400px;
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .featured-item {
+    flex: 0 0 600px;
+  }
+
+  .featured-item:nth-child(4) {
+    position: absolute;
+    bottom: 25px;
+    width: 97%;
+    height: 150px;
+  }
+
+  .popular {
+    align-items: center;
+  }
+  
+  .popular > .container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .popular-item {
+    width: 100%;
+    height: 50px;
+  }
+
+  .latest > .container{
+    flex-wrap: none;
+    height: auto;
+  }
+  
+  .latest-item {
+    width: 100%;
+    height: 100px;
+  }
+
+  .channels > .container {
+    height: 200px;
+    justify-content: space-around;
+    overflow-x: auto;
+  }
+
+  .channel-item {
+    height: 100%;
+    flex: 0 0 250px;
+    margin-right: 12px;
+  }
+
+  .watch {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  
+    background-color: rgba(255, 192, 203, 0.507);
+  }
+  
+  .watch > .container {
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .side-videos {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .main-vid {
+    width: 100%;
+    height: 70%;
+    background-color: green;
+  }
+  
+  .side-vid {
+    background-color: yellow;
+    width: 33%;
+    height: 100%;
+  }
+
+  /* Work ??? */
+
+  #bottom-nav {
+    flex-direction: column;
+  }
+
+  .footer-left,
+  .footer-right {
+  width: 100%;
+  height: auto;
+  }
+}
