@@ -1,6 +1,11 @@
 # Building with Responsive Design
 
-See the page live [here](https://ubercj.github.io/tnw-mockup/).
+See the page live [here](https://ubercj.github.io/tnw-mockup/). To see the different layouts from the different media queries, you'll want to change the size of your browser window or use the Responsive Design mode in your browser's developer tools.
+
+The 3 different layouts have the following breakpoints for screen width:
+-1024 px or wider
+-Between 768 and 1023 px wide
+-767 px or less
 
 This is a project from The Odin Project's curriculum - read more about this assignment [here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/html-and-css/lessons/building-with-responsive-design).
 
