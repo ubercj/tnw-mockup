@@ -1,15 +1,15 @@
 # Building with Responsive Design
 
-See the page live [here](https://ubercj.github.io/tnw-mockup/). To see the different layouts from the different media queries, you'll want to change the size of your browser window or use the Responsive Design mode in your browser's developer tools.
-
-The 3 different layouts have the following breakpoints for screen width:
--1024 px or wider
--Between 768 and 1023 px wide
--767 px or less
-
 This is a project from The Odin Project's curriculum - read more about this assignment [here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/html-and-css/lessons/building-with-responsive-design).
 
-The goal of this project is to create sort of a copy of [the TNW site](https://thenextweb.com/). They use media queries to gracefully transition between devices with different screen widths.
+The goal of this project is to mimic the layout of [the TNW site](https://thenextweb.com/). They use media queries to gracefully transition between devices with different screen widths.
+
+See my page live [here](https://ubercj.github.io/tnw-mockup/). To see the different layouts from the different media queries, you'll want to change the size of your browser window or use the Responsive Design mode in your browser's developer tools.
+
+The 3 different layouts have the following breakpoints for screen width:
+* 1024 px or wider
+* Between 768 and 1023 px wide
+* 767 px or less
 
 I actually found this to be pretty fun, and the Responsive Design mode in Firefox Developer Tools was incredibly helpful and easy to use.
 
