@@ -16,3 +16,13 @@ I actually found this to be pretty fun, and the Responsive Design mode in Firefo
 One cool thing that I learned while building this project was how to deal with content within a page that has a scrollbar, and sort of "disappears" as you scroll. The Videos and Channels sections of the page both have this.
 
 I found out that the solution is 2-part. First, if you want to be able to scroll horizontally for example, you set the container element to `overflow-x: auto;`. Then - and this was the part that was unintuitive to me - the child elements must have a flex attribute like so: `flex: 0 0 150px`. The flex basis can be any size you want, but it has to be included, and both the `flex-grow` and `flex-shrink` must be set to 0.
+
+## Viewport Meta Tag
+
+After all of this effort, when I loaded up the page on my own phone, it wasn't displaying the proper CSS! I did some Googling and discovered that I needed to include this meta tag in the `<head>` of my html file:
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+There's a great [page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) that goes into detail on why this is necessary.
